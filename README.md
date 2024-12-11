@@ -63,8 +63,10 @@ Ultimately the data I use looks like this:
 In order to use categorical values in a regression problem, the dataset will need to be transformed using one-hot encoding. 
 This method takes categorical values in a column and creates a separate column for each, marked 1 if true and 0 if false.
 Pandas has a built in function to easily do this. <br>
-`encoded = pd.get_dummies(df, columns=['TYPE', 'SUBLOCALITY'], drop_first=True)`<br>
-This encoded dataset now has 5 additional columns for each value that was in TYPE and 7 additional columsn for each value in SUBLOCALITY. 
+
+`encoded = pd.get_dummies(df, columns=['TYPE', 'SUBLOCALITY'], drop_first=True)`
+
+<br>This encoded dataset now has 5 additional columns for each value that was in TYPE and 7 additional columsn for each value in SUBLOCALITY. 
 This brings the total from 6 to 16, increasing the size of the dataset while making it compatible with regression models. 
 
 Describe the methods used fro the data analysis
