@@ -12,9 +12,26 @@ Whether you're looking to buy or sell, the most common approach to evaluating pr
 
 ## Project Description:
 
-- First, describe the motivation for the project
+# Motivation
+When searching for a reasearch problem, I browsed many datasets and the ones that caught my eye the most were the real estate ones. The tangibility and relevance of realestate as something I can see in the real world is appealing.
+Real estate has been on my mind recently as I'm getting to an age where many of my peers are interesting in buying a property of their own. 
+I am currently renting an apartment and am curious about the possibilities of one day buying property when I am financially stable enough. 
+Knowing more about the market and determining what factors more prominantly impact the price of housing will make me more prepared when I reach a point in life when I'm ready to buy property.
 
 - Next, describe what you intended to discover, possibly as a list of aims
+# Goals
+
+My primary objective is to predict the price of a house based on some of it's features such as square footage, location, number of bedrooms and number of bathrooms. 
+
+However, there are other questions I've gotten curious about as I've explored the dataset. 
+Determining which features of a property impact the price most directly would be benificial for homeowners or real estate investors because they can focus on which features will gain them the most profit. 
+Perhaps houses in a certain town sell for much higher when they have more bedrooms due to the amount of families that want to live there as opposed to single people. 
+A model that could determine that the number of bedrooms directly coorilate to how much a property sells for would be useful information. 
+With it, a developer could determine if it's cost effective to have a floor plan with an additional bedroom or not.
+
+Another question that can be answered is if we can classify where a buyer should look for property based on their list of criteria. 
+For instance, if a buyer wants a two bedroom condo but can only afford something in the 300,000 - 400,000 range, what town should they look in?
+This would require me to additionally implement a classification model using the same dataset, but changing my dependent variable to location instead of price.
 
 # Dataset
 
