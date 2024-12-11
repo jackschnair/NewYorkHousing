@@ -18,7 +18,6 @@ Real estate has been on my mind recently as I'm getting to an age where many of 
 I am currently renting an apartment and am curious about the possibilities of one day buying property when I am financially stable enough. 
 Knowing more about the market and determining what factors more prominantly impact the price of housing will make me more prepared when I reach a point in life when I'm ready to buy property.
 
-- Next, describe what you intended to discover, possibly as a list of aims
 # Goals
 
 My primary objective is to predict the price of a house based on some of it's features such as square footage, location, number of bedrooms and number of bathrooms. 
