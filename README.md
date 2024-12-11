@@ -101,7 +101,7 @@ grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=5, n_jobs=-1,
 
 grid_search.fit(x_train, y_train)
 ```
-Fits 5 folds for each of 72 candidates, totalling 360 fits
+Fits 5 folds for each of 72 candidates, totalling 360 fits.<br>
 Best Parameters: {'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 200}
 
 ## Model Results
