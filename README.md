@@ -69,6 +69,19 @@ Pandas has a built in function to easily do this. <br>
 <br>This encoded dataset now has 5 additional columns for each value that was in TYPE and 7 additional columsn for each value in SUBLOCALITY. 
 This brings the total from 6 to 16, increasing the size of the dataset while making it compatible with regression models. 
 
+## SMOTE (Not Used)
+
+Throughout the span of this project I have posted on the class discussion board with every milestone, often mentioning problems with my dataset. \
+When I switched to my current New York Housing dataset my problem became the small size of my dataset. \
+It was suggested that I try SMOTE (Synthetic Minority Over-sampling Technique) to remedy the small size of the dataset. \
+I gave it a shot and even tired SMOTENC for my categorical data, but had poor results. \ 
+I then thought about why this would be and realized that oversampling doesn't really make sense for a regression problem. \ 
+The point of minority oversampling is to make up for a size disperity in a classification problem. \ 
+Not only does it not make sense to do for regression, but it could actually overfit the data if the synthetic data is too similar to what is already there.\ 
+Unfortunately I'm not sure there is a solution to a small dataset when doing a regression problem. \ 
+The best bet is probably finding a more appropriate model or using feature engineering to improve performance.
+
+## Model Results
 Describe the methods used fro the data analysis
 
 | Model | Cross Fold Validation Score |
