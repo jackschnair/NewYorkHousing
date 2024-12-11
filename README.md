@@ -1,5 +1,5 @@
 # New York Housing Predictor
-Final Project for CS539 Machine Learning
+Final Project for CS539 Machine Learning <br>
 By Jack Schnair
 
 ## Overview
