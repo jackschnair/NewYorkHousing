@@ -44,6 +44,15 @@ From this dataset, I am able to identify trends in the market and reasonably pre
 
 Describe the methods used fro the data analysis
 
+| Model | Cross Fold Validation Score |
+| ----------- | ----------- |
+| Linear Regression        | 0.5032 |
+| Random Forest Regression | 0.6547 |
+| Ridge Forest Regression  | 0.5034 |
+| Lasso Regression         | 0.5033 |
+| CatBoost Regression      | Text |
+
+
 # Conclusion
 
 A final section that summarizes the results and conclusions, including any relevant figures/visualizations
