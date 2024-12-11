@@ -40,6 +40,17 @@ I searched for a relevant dataset that would fit my needs while keeping my propo
 I chose this dataset because it is similar to the Connecticut one in the sense that it a localized real estate dataset. However, what makes it more applicable are the independent variables such as square footage, bedrooms, bathrooms, and locality within the city. 
 From this dataset, I am able to identify trends in the market and reasonably predict what properties will sell for based on its location, property type, square footage, bedrooms and bathrooms compared to other similar properties. The unfortunate downside to this dataset is it's small size of just under 5,000 records, but I'm willing to sacrafice quantity for quality.
 
+Ultimately the data I use looks like this: 
+|  | Type | Price | Beds | Bath | Property sqft | Sublocality
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| 0 | Condo for sale | 315000 | 2 | 2 | 1400.00 | Manhattan |
+| 1 | House for sale | 260000 | 4 | 2 | 2015.00 | Richmond County |
+| 2 | Condo for sale | 69000  | 3 | 1 | 445.00 | New York |
+| 3 | House for sale | 690000 | 5 | 2 | 4004.00 | Kings County |
+| 4 | Condo for sale | 899500 | 2 | 2 | 2184.20 | New York |
+| ... | ... | ... | ... | ... | ... | ... |
+
+
 # Methods
 
 Describe the methods used fro the data analysis
