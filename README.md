@@ -44,11 +44,16 @@ Ultimately the data I use looks like this:
 |  | Type | Price | Beds | Bath | Property sqft | Sublocality
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | 0 | Condo for sale | 315000 | 2 | 2 | 1400.00 | Manhattan |
-| 1 | House for sale | 260000 | 4 | 2 | 2015.00 | Richmond County |
-| 2 | Condo for sale | 69000  | 3 | 1 | 445.00 | New York |
-| 3 | House for sale | 690000 | 5 | 2 | 4004.00 | Kings County |
-| 4 | Condo for sale | 899500 | 2 | 2 | 2184.20 | New York |
+| 2 | House for sale | 260000 | 4 | 2 | 2015.00 | Richmond County |
+| 3 | Condo for sale | 69000  | 3 | 1 | 445.00 | New York |
+| 5 | House for sale | 690000 | 5 | 2 | 4004.00 | Kings County |
+| 6 | Condo for sale | 899500 | 2 | 2 | 2184.20 | New York |
 | ... | ... | ... | ... | ... | ... | ... |
+| 4796 | Co-op for sale | 599000 | 1 | 1 | 2184.20 | New York |
+| 4797 | Co-op for sale | 245000 | 1 | 1 | 2184.20 | Queens |
+| 4798 | Co-op for sale | 1275000 | 1 | 1 | 2184.20 | New York |
+| 4799 | Condo for sale | 598125 | 2 | 1 | 655.00 | Queens |
+| 4800 | Co-op for sale | 349000 | 1 | 1 | 750.00 | Brooklyn |
 
 
 # Methods
