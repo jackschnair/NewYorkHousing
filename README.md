@@ -81,6 +81,29 @@ Not only does it not make sense to do for regression, but it could actually over
 Unfortunately I'm not sure there is a solution to a small dataset when doing a regression problem.
 The best bet is probably finding a more appropriate model or using feature engineering to improve performance.
 
+## GridSearchCV
+
+When choosing the best model for a problem it's not only important to choose the modle itself, but also the parameters used in it. GridSearchCV can be used to tune a model's parameters by performing cross validation on all the different combinations of parameters. Once the most accurate combination is found, the user can get the model and parameters for future use. <br>
+
+Example of GridSearchCV being used on a Random Forest model:
+```
+rf = RandomForestRegressor(random_state=12)
+
+param_grid = {
+    'n_estimators': [100, 200, 300],
+    'max_depth': [None, 10, 20],
+    'min_samples_split': [2, 5],
+    'min_samples_leaf': [1, 2],
+    'bootstrap': [True, False]
+}
+
+grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=5, n_jobs=-1, verbose=2)
+
+grid_search.fit(x_train, y_train)
+```
+Fits 5 folds for each of 72 candidates, totalling 360 fits
+Best Parameters: {'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 200}
+
 ## Model Results
 Describe the methods used fro the data analysis
 
@@ -90,7 +113,7 @@ Describe the methods used fro the data analysis
 | Random Forest Regression | 0.6547 |
 | Ridge Forest Regression  | 0.5034 |
 | Lasso Regression         | 0.5033 |
-| CatBoost Regression      | Text |
+| CatBoost Regression      | 0.6670 |
 
 
 # Conclusion
