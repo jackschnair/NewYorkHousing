@@ -3,7 +3,7 @@ Final Project for CS539 Machine Learning <br>
 By Jack Schnair
 
 
-** MAKE SURE TO SPELL CHECK ALL THIS COPYING FROM GOOGLE DOCK **
+**AKE SURE TO SPELL CHECK ALL THIS COPYING FROM GOOGLE DOCK**
 # Overview
 
 Give an overview of the project, the data, and the results
