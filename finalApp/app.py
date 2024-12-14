@@ -33,12 +33,11 @@ app_ui = ui.page_fluid(
         ui.input_select(
             "bedrooms",
             "Choose number of bedrooms:",
-            choices=["1", "2", "3"]),
-        #ui.output_text("selected_bedrooms"),
+            choices=["1", "2", "3", "4", "5"]),
         ui.input_select(
             "bathrooms",
             "Choose number of bathrooms:",
-            choices=["1", "2", "3"]),
+            choices=["1", "2", "3", "4", "5"]),
         ui.input_select(
             "type",
             "Choose a property type:",
@@ -46,25 +45,22 @@ app_ui = ui.page_fluid(
                 "Type": {"Condo for sale": "Condo",
                         "House for sale": "House",
                         "Townhouse for sale": "Townhouse",
-                        "Multi-family home for sale": "Multi-family",
-                        "Land for sale": "Undeveloped Land" },
+                        "Multi-family home for sale": "Multi-family"},
             },
         ),
         ui.input_select(
             "area",
             "Choose an area:",
             {
-                "Area": {"New York": "New York",
+                "Area": {"Manhattan": "Manhattan",
                         "Queens": "Queens",
-                        "Kings County": "Kings County",
                         "The Bronx": "The Bronx",
-                        #"Brooklyn": "Brooklyn",
-                        "Richmond County": "Richmond County",
+                        "Brooklyn": "Brooklyn",
                         "Staten Island": "Staten Island", },
             },
         ),
         ui.input_text("sqft", "Enter preferred square footage:", value="2000"),
-        ui.input_checkbox_group("checkbox_group", "Checkbox group",
+        ui.input_checkbox_group("checkbox_group", "Checkbox group (Not Functional)",
         {"bed_check": "Bedrooms","bath_check": "Bathrooms","type_check": "Property Type","area_check": "Area", "sqft_check": "Square Footage"},),
         ui.output_text("selected_bedrooms"),
         ui.output_text("selected_bathrooms"),
@@ -106,16 +102,46 @@ def server(input, output, session):
             x = df.drop(columns=['PRICE'])
             y = df['PRICE']
 
+            # Match Type and Locality to encoded values
+            isCondo = "0"
+            isHouse = "0"
+            isMulti = "0"
+            isTown = "0"
+            if input.type() == "Condo":
+                isCondo = "1"
+            if input.type() == "House":
+                isHouse = "1"
+            if input.type() == "Townhouse":
+                isMulti = "1"
+            if input.type() == "Multi-family":
+                isTown = "1"
+
+            
+            isManhattan = "0"
+            isQueens = "0"
+            isStatenIsland = "0"
+            isTheBronx = "0"
+            isBrooklyn = "0"
+            if input.area() == "Manhattan":
+                isManhattan = "1"
+            if input.area() == "Queens":
+                isQueens = "1"
+            if input.area() == "Staten Island":
+                isStatenIsland = "1"
+            if input.area() == "The Bronx":
+                isTheBronx = "1"
+            if input.area() == "Brooklyn":
+                isBrooklyn = "1"
 
             x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=12)
 
             rr_model = RandomForestRegressor(n_estimators=64, random_state=12)
             rr_model.fit(x_train, y_train)
 
-            our_home = pd.DataFrame(np.array([[input.bedrooms(), input.bathrooms(), input.sqft(), "0", "1", "0", "0", "0", "0", "0", "0", "1", "0", "0", "0"]]))
+            our_home = pd.DataFrame(np.array([[input.bedrooms(), input.bathrooms(), input.sqft(), isCondo, isHouse, isMulti, isTown, "0", "1", "0", "0"]]))
             our_home.columns = x_train.columns
             our_home_pred = rr_model.predict(our_home)
-
-            return "Estimated Price: " + str(our_home_pred)
+            pred_str = str(our_home_pred)
+            return "Estimated Price: $" + pred_str[1:-7]
 
 app = App(app_ui, server)
