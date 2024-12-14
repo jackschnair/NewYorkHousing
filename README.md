@@ -2,6 +2,9 @@
 Final Project for CS539 Machine Learning <br>
 By Jack Schnair
 
+**Note: I decided to do a pdf report instead for the turn in**
+
+
 # Overview
 
 Give an overview of the project, the data, and the results
